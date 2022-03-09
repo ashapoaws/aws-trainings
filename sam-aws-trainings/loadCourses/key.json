@@ -1,4 +1,4 @@
 {
     "CatalogId": {"S": "arch"},
-    "CourseId": {"N": "201"}
+    "CourseId": {"N": 201}
 }
