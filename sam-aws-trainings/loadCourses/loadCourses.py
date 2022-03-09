@@ -2,8 +2,15 @@ import boto3
 import json
 
 table_name = 'Trainings'
-dynamodb = boto3.resource('dynamodb', endpoint_url="http://localhost:8000")
-dynamodb_client = boto3.client('dynamodb', endpoint_url="http://localhost:8000")
+
+# Local ddb
+# dynamodb = boto3.resource('dynamodb', endpoint_url="http://localhost:8000")
+# dynamodb_client = boto3.client('dynamodb', endpoint_url="http://localhost:8000")
+
+# Ddb service
+dynamodb = boto3.resource('dynamodb')
+dynamodb_client = boto3.client('dynamodb')
+
 
 # Create a table if it not exists 
 def create_ddb_table(ddb_table_name):
@@ -42,11 +49,11 @@ def load_courses(courses):
     table = dynamodb.Table(table_name)
     for course in courses:
         CategoryId = course['CategoryId']
-        CourseId = course['CourseId']
+        CourseId = int(course['CourseId'])
         CategoryName = course['CategoryName']
         CourseName = course['CourseName']
         Level = course['Level']
-        Duration = course['Duration']
+        Duration = int(course['Duration'])
         CourseOutline = course['CourseOutline']
         table.put_item(Item=course)
     print(table.item_count, "items loaded")
@@ -64,7 +71,7 @@ else:
     print("Table already exists")
 
 # Load data from file
-with open('courses_test.json') as json_file:
+with open('loadCourses/courses_test.json') as json_file:
     courses_list = json.load(json_file)
 load_courses(courses_list)
 
