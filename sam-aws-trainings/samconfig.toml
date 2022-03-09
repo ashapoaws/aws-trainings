@@ -1,0 +1,12 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "sam-aws-trainings"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-1bahfqkp69dl9"
+s3_prefix = "sam-aws-trainings"
+region = "eu-central-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+parameter_overrides = "tableName=\"Trainings\""
+image_repositories = []
