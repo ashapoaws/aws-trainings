@@ -1,0 +1,20 @@
+[
+    {
+        "CategoryId": "arch",
+        "CourseId": 201,
+        "CategoryName": "Architect",
+        "CourseName": "Architecting on AWS",
+        "Level": "Intermediate",
+        "Duration": 3,
+        "CourseOutline": "http://example.com"
+    },
+    {
+        "CategoryId": "cont",
+        "CourseId": 203,
+        "CategoryName": "Containers",
+        "CourseName": "Running Containers on Amazon Elastic Kubernetes Service (Amazon EKS)",
+        "Level": "Intermediate",
+        "Duration": 3,
+        "CourseOutline": "http://example.com"
+    }   
+]
