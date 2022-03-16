@@ -1,1 +1,5 @@
 aws dynamodb get-item --table-name Trainings --key file://key.json 
+
+aws dynamodb get-item --table-name Trainings --key '{"CategoryId": {"S": "cont"}, "CourseId": {"N": "203"}}'
+
+{"CategoryId": {"S": "arch"},"CourseId": {"N": "201"}}

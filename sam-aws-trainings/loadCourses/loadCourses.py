@@ -4,12 +4,12 @@ import json
 table_name = 'Trainings'
 
 # Local ddb
-# dynamodb = boto3.resource('dynamodb', endpoint_url="http://localhost:8000")
-# dynamodb_client = boto3.client('dynamodb', endpoint_url="http://localhost:8000")
+dynamodb = boto3.resource('dynamodb', endpoint_url="http://localhost:8000")
+dynamodb_client = boto3.client('dynamodb', endpoint_url="http://localhost:8000")
 
 # Ddb service
-dynamodb = boto3.resource('dynamodb')
-dynamodb_client = boto3.client('dynamodb')
+# dynamodb = boto3.resource('dynamodb')
+# dynamodb_client = boto3.client('dynamodb')
 
 
 # Create a table if it not exists 
