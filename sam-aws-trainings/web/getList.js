@@ -9,6 +9,10 @@ function getList() {
 }
 */
 
+async function apiRequest(){
+    
+}
+
 async function postData(data = {}){
     // Default options are marked with *
     // alert(data.CategoryName);
